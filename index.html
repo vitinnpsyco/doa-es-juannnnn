@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a campanha da VIPLA ONG SUL, veja como participar e saiba como contribuir.">
+
+    <title>Campanha solidária | VIPLA ONG SUL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="theme-ripple" id="themeRipple" aria-hidden="true">
+        <span class="theme-ripple-ring"></span>
+    </div>
+
+    <!-- FUNDO -->
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- NAVEGAÇÃO -->
+    <nav class="nav" id="nav">
+        <div class="container nav-content">
+
+            <a href="#inicio" class="logo">JUAN<span> GOSTOZO</span></a>
+
+            <div class="menu">
+                <a href="#inicio" class="menu-link">Início</a>
+                <a href="#causa" class="menu-link">Iniciativa</a>
+                <a href="#impacto" class="menu-link">Impacto</a>
+                <a href="#doar" class="menu-link">Contribuir</a>
+
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">
+                    <span class="moon">☾</span>
+                    <span class="sun">☀</span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <main id="conteudo">
+    <header class="hero" id="inicio">
+
+        <div class="container hero-grid">
+
+            <!-- Texto -->
+            <div class="hero-content reveal">
+
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Campanha solidária
+                </div>
+
+                <h1 aria-label="Pequenas atitudes. Grandes mudanças.">
+                    <span class="hero-title-line" aria-hidden="true">Pequenas atitudes.</span>
+                    <br>
+                    <span class="hero-title-line hero-title-line-accent" aria-hidden="true">Grandes mudanças.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Uma contribuição pode parecer pequena quando feita
+                    por uma só pessoa. Quando muitas pessoas participam,
+                    cada gesto ajuda a transformar apoio em ações concretas.
+                    <br><br>
+                    Esta campanha reúne pessoas dispostas a ajudar.
+                    Escolha como participar e descubra formas de contribuir.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#doar" class="btn primary magnetic">
+                        <span>Quero ajudar</span>
+                        <span class="arrow">→</span>
+                    </a>
+
+                    <a href="#causa" class="btn secondary">Conhecer a causa</a>
+                </div>
+
+            </div>
+
+            <!-- Imagem -->
+            <div class="hero-visual reveal right" id="heroVisual">
+
+                <div class="hero-glow"></div>
+
+                <div class="hero-image">
+                    <img src="cahorro.jpeg" alt="Duas pessoas tirando uma selfie ao ar livre">
+                    <div class="image-overlay"></div>
+                </div>
+
+                <div class="floating-card">
+                    <div class="floating-top">PROGRESSO DA CAMPANHA</div>
+                    <div class="floating-number">7%</div>
+                    <p>
+                        Percentual ilustrativo. Atualize
+                        com o progresso real da campanha.
+                    </p>
+                    <div class="mini-progress"><span></span></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- VÍDEO -->
+        <section class="video-section">
+
+            <div class="video-heading reveal">
+                <div class="section-label">CONHEÇA A INICIATIVA</div>
+
+                <h2 class="video-title">
+                    Veja de perto
+                    <em>esta iniciativa.</em>
+                </h2>
+
+                <p>Assista ao vídeo e conheça melhor a campanha.</p>
+            </div>
+
+            <div class="video-container reveal scale">
+
+                <div class="video-glow"></div>
+                <div class="video-ring"></div>
+
+                <div class="video-frame">
+
+                    <video
+                        id="siteVideo"
+                        class="site-video"
+                        playsinline
+                        preload="metadata"
+                        poster="cahorro.jpeg"
+                        aria-label="Vídeo sobre a campanha"
+                    >
+                        <source src="IMG_0996.MP4" type="video/mp4">
+                        Seu navegador não oferece suporte à reprodução deste vídeo.
+                    </video>
+
+                    <!-- Botão central (play) -->
+                    <button
+                        class="video-play-center"
+                        id="videoPlayCenter"
+                        type="button"
+                        aria-label="Reproduzir vídeo"
+                    >
+                        <span class="play-icon">▶</span>
+                    </button>
+
+                    <div class="video-shine"></div>
+
+                    <!-- Controles: somente timeline + tela cheia -->
+                    <div class="video-controls">
+
+                        <div class="video-progress-wrap" id="videoProgressWrap">
+                            <div class="video-progress" id="videoProgress">
+                                <span id="videoProgressBar"></span>
+                                <i class="video-thumb" id="videoThumb"></i>
+                            </div>
+                        </div>
+
+                        <button
+                            id="videoMuteToggle"
+                            class="video-control"
+                            type="button"
+                            aria-label="Silenciar vídeo"
+                            aria-pressed="false"
+                            title="Silenciar vídeo"
+                        >
+                            <svg class="volume-on-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+                                <path d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+                                <path d="M19 5a10 10 0 0 1 0 14"></path>
+                            </svg>
+                            <svg class="volume-off-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+                                <path d="m16 9 5 6"></path>
+                                <path d="m21 9-5 6"></path>
+                            </svg>
+                        </button>
+
+                        <button
+                            id="videoFullscreen"
+                            class="video-control"
+                            type="button"
+                            aria-label="Ativar tela cheia do vídeo"
+                        >
+                            ⛶
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="scroll-indicator">
+            <span>Role para continuar</span>
+            <div></div>
+        </div>
+
+    </header>
+
+    <!-- NÚMEROS -->
+    <section class="stats">
+        <div class="container stats-grid">
+
+            <div class="stat reveal">
+                <div class="stat-index">01</div>
+                <div class="stat-main">
+                    <strong class="counter" data-target="120">0</strong>
+                    <span>pessoas</span>
+                </div>
+                <p>Quantidade ilustrativa de pessoas alcançadas. Atualize com o total real da campanha.</p>
+            </div>
+
+            <div class="stat reveal">
+                <div class="stat-index">02</div>
+                <div class="stat-main">
+                    <strong>R$ 7,8 mil</strong>
+                    <span>exemplo</span>
+                </div>
+                <p>Valor ilustrativo. Atualize com o total real arrecadado.</p>
+            </div>
+
+            <div class="stat reveal">
+                <div class="stat-index">03</div>
+                <div class="stat-main">
+                    <strong>7%</strong>
+                    <span>progresso</span>
+                </div>
+                <p>Percentual ilustrativo. Atualize com o progresso real da campanha.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CAUSA -->
+    <section id="causa">
+        <div class="container about-grid">
+
+            <div class="about-images reveal left">
+
+                <div class="about-photo photo-one">
+                    <img src="cahorro.jpeg" alt="Duas pessoas tirando uma selfie ao ar livre" loading="lazy">
+                </div>
+
+                <div class="about-photo photo-two">
+                    <img src="cahorro.jpeg" alt="Duas pessoas em uma selfie ao ar livre" loading="lazy">
+                </div>
+
+                <div class="image-label">
+                    <span class="badge-dot"></span>
+                    Juntos, fazemos a diferença.
+                </div>
+
+            </div>
+
+            <div class="reveal right">
+
+                <div class="section-label">A INICIATIVA</div>
+
+                <h2 class="section-title">
+                    A mudança começa
+                    quando alguém
+                    <em>decide participar.</em>
+                </h2>
+
+                <p class="section-text">
+                    Ajudar não exige grandes gestos. Às vezes,
+                    tudo começa com a decisão de participar.
+                    <br><br>
+                    Esta campanha aproxima pessoas que querem
+                    contribuir e apoiar uma iniciativa coletiva.
+                    <br><br>
+                    Você pode contribuir, divulgar a iniciativa,
+                    participar das ações ou convidar alguém para conhecê-la.
+                </p>
+
+                <div class="check-list">
+
+                    <div class="check">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Apoio direto</strong>
+                            <p>As contribuições podem apoiar as necessidades definidas para a campanha.</p>
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Participação</strong>
+                            <p>Escolha a forma de ajudar que fizer mais sentido para você.</p>
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <strong>Transparência</strong>
+                            <p>A campanha deve informar com clareza os resultados e a destinação dos recursos.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- IMPACTO -->
+    <section id="impacto">
+        <div class="container">
+
+            <div class="section-heading reveal">
+                <div class="section-label">FORMAS DE PARTICIPAR</div>
+
+                <h2 class="section-title">
+                    Toda ajuda pode
+                    <em>começar pequena.</em>
+                </h2>
+
+                <p class="section-text">
+                    Uma campanha não depende apenas de grandes contribuições.
+                    A participação de muitas pessoas, de diferentes maneiras,
+                    também pode gerar impacto.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <article class="info-card reveal">
+                    <span class="card-number">01</span>
+                    <div class="card-line"></div>
+                    <h3>Necessidades básicas</h3>
+                    <p>
+                        De acordo com os objetivos da campanha, os recursos
+                        podem apoiar a compra de alimentos, materiais e outros
+                        itens necessários.
+                    </p>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+                <article class="info-card reveal">
+                    <span class="card-number">02</span>
+                    <div class="card-line"></div>
+                    <h3>Estrutura</h3>
+                    <p>
+                        Parte dos recursos pode cobrir custos do projeto,
+                        como transporte, materiais e organização das atividades.
+                    </p>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+                <article class="info-card reveal">
+                    <span class="card-number">03</span>
+                    <div class="card-line"></div>
+                    <h3>Comunidade</h3>
+                    <p>
+                        Ao compartilhar a iniciativa, você ajuda a apresentá-la
+                        a novas pessoas e a ampliar a rede de apoio.
+                    </p>
+                    <span class="card-arrow">↗</span>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery-section">
+        <div class="container">
+
+            <div class="section-heading reveal">
+                <div class="section-label">PARTICIPAÇÃO</div>
+
+                <h2 class="section-title">
+                    Pessoas são o
+                    <em>ponto de partida.</em>
+                </h2>
+
+                <p class="section-text">
+                    Cada gesto de colaboração começa com uma pessoa.
+                    Juntos, esses gestos podem fortalecer uma iniciativa.
+                </p>
+            </div>
+
+            <div class="gallery">
+
+                <div class="gallery-item large reveal scale">
+                    <img src="imagem isadora.png" alt="Isadora sorrindo sentada à mesa" loading="lazy">
+                    <div class="gallery-caption"><span>01</span>Isadora</div>
+                </div>
+
+                <div class="gallery-item small reveal scale">
+                    <img src="imagem jon.png" alt="Juan usando fones de ouvido" loading="lazy">
+                    <div class="gallery-caption"><span>02</span>Juan</div>
+                </div>
+
+                <div class="gallery-item reveal scale">
+                    <img src="imagem jonata.png" alt="Juan sorrindo para a câmera" loading="lazy">
+                    <div class="gallery-caption"><span>03</span>Juan</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DOAÇÃO -->
+    <section class="donation-section" id="doar">
+        <div class="container">
+
+            <div class="donation-box reveal">
+
+                <div class="donation-content">
+
+                    <div class="section-label">CONTRIBUIÇÃO</div>
+
+                    <h2 class="wave-title">
+                        <span>Escolha quanto</span><br>
+                        <span>quer <em class="donation-highlight">contribuir.</em></span>
+                    </h2>
+
+                    <p>
+                        Escolha um valor para iniciar uma conversa
+                        pelo WhatsApp e receber as orientações para contribuir.
+                    </p>
+
+                </div>
+
+                <div class="donation-form">
+
+                    <div class="values">
+                        <button class="value" type="button" data-value="10" aria-pressed="false">R$ 10</button>
+                        <button class="value" type="button" data-value="25" aria-pressed="false">R$ 25</button>
+                        <button class="value" type="button" data-value="50" aria-pressed="false">R$ 50</button>
+                        <button class="value" type="button" data-value="100" aria-pressed="false">R$ 100</button>
+                        <button class="value" type="button" data-value="200" aria-pressed="false">R$ 200</button>
+                        <button class="value" type="button" data-value="500" aria-pressed="false">R$ 500</button>
+                    </div>
+
+                    <div class="input-wrap">
+                        <span>R$</span>
+                        <input
+                            id="customValue"
+                            type="number"
+                            min="1"
+                            max="100000"
+                            step="0.01"
+                            placeholder="Digite outro valor"
+                            aria-label="Digite outro valor em reais"
+                        >
+                    </div>
+
+                    <button class="btn primary donate magnetic" id="donateButton" type="button">
+                        <span>Continuar pelo WhatsApp</span>
+                        <span>→</span>
+                    </button>
+
+                    <div class="progress-area">
+                        <div class="progress-info">
+                            <span>Progresso ilustrativo</span>
+                            <strong>7%</strong>
+                        </div>
+
+                        <div class="progress"><span></span></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact">
+        <div class="container reveal">
+
+            <div class="section-label">FALE CONOSCO</div>
+
+            <h2 class="section-title">
+                Tem alguma
+                <em>dúvida?</em>
+            </h2>
+
+            <p class="section-text">
+                Se você quer entender melhor a campanha,
+                saber como participar ou simplesmente conversar
+                Ficou com dúvidas ou quer saber como participar?
+                Fale conosco pelo WhatsApp.
+            </p>
+
+            <a
+                href="https://wa.me/5551997711016"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="whatsapp-button"
+            >
+                <span class="whatsapp-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20.5 3.5A11.9 11.9 0 0 0 12.03 0C5.45 0 .1 5.35.1 11.93c0 2.1.55 4.15 1.6 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.72 1.46h.01c6.57 0 11.92-5.35 11.92-11.93 0-3.18-1.24-6.17-3.45-8.38Z"/>
+                    </svg>
+                </span>
+                Conversar pelo WhatsApp
+            </a>
+
+        </div>
+    </section>
+
+    <!-- BATIMENTO CARDÍACO -->
+    <section class="heartbeat-section">
+
+        <div class="heartbeat-content">
+
+            <div class="heartbeat-label">
+                <span class="heartbeat-dot"></span>
+                CADA GESTO IMPORTA
+            </div>
+
+            <div class="heartbeat-line">
+
+                <svg viewBox="0 0 900 160" preserveAspectRatio="none" aria-hidden="true">
+
+                    <defs>
+                        <!-- Degradê: some para trás, forte na frente -->
+                        <linearGradient id="heartbeatFade" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0"   stop-color="#fff" stop-opacity="0"/>
+                            <stop offset="0.9" stop-color="#fff" stop-opacity="1"/>
+                            <stop offset="1"   stop-color="#fff" stop-opacity="1"/>
+                        </linearGradient>
+
+                        <!-- Máscara que percorre a linha revelando os batimentos -->
+                        <mask id="heartbeatMask" maskUnits="userSpaceOnUse" x="0" y="-20" width="900" height="200">
+                            <rect
+                                class="heartbeat-sweep"
+                                x="-450"
+                                y="-20"
+                                width="450"
+                                height="200"
+                                fill="url(#heartbeatFade)"
+                            />
+                        </mask>
+                    </defs>
+
+                    <path
+                        class="heartbeat-path"
+                        mask="url(#heartbeatMask)"
+                        d="
+                            M0 80 H40
+                            L55 80 L68 40 L82 120 L96 80
+                            H130
+                            L142 80 L155 20 L172 140 L190 80
+                            H225
+                            L238 80 L248 55 L258 105 L268 80
+                            H300
+                            L314 80 L328 10 L348 150 L366 80
+                            H400
+                            L412 80 L424 45 L436 115 L448 80
+                            H480
+                            L494 80 L508 15 L528 145 L546 80
+                            H580
+                            L592 80 L604 50 L616 110 L628 80
+                            H660
+                            L674 80 L688 20 L708 140 L726 80
+                            H760
+                            L772 80 L784 40 L796 120 L808 80
+                            H900
+                        "
+                    />
+
+                </svg>
+
+            </div>
+
+            <p>
+                Quando cada pessoa faz a sua parte,
+                pequenos gestos podem gerar grandes mudanças.
+            </p>
+
+        </div>
+
+    </section>
+
+        </main>
+
+        <!-- WHATSAPP FLUTUANTE -->
+    <a
+        href="https://wa.me/5551997711016"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-float"
+        aria-label="Abrir conversa no WhatsApp"
+    >
+        <span class="whatsapp-tooltip">Conversar pelo WhatsApp</span>
+
+        <svg viewBox="0 0 24 24">
+            <path d="M20.5 3.5A11.9 11.9 0 0 0 12.03 0C5.45 0 .1 5.35.1 11.93c0 2.1.55 4.15 1.6 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.72 1.46h.01c6.57 0 11.92-5.35 11.92-11.93 0-3.18-1.24-6.17-3.45-8.38Zm-8.46 18.3h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.74.98 1-3.64-.23-.38a9.9 9.9 0 1 1 8.16 4.63Z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
